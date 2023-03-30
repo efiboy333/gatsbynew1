@@ -1,0 +1,11 @@
+name: Build Gatsby Site
+
+on:
+  workflow_call
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      ## setup all the required steps to build the site
+      

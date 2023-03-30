@@ -1,0 +1,17 @@
+name: 'Deployment'
+
+on:
+  push:
+    branches:
+      - master
+      - main
+      - '*'
+      - '**'
+
+jobs:
+
+  build-app-image:
+  ## Call the workflows here
+
+  slack-notify:
+  ## call the workflows here
