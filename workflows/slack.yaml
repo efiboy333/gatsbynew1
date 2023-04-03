@@ -6,9 +6,8 @@ on:
       STATUS:
         required: true
         type: string
-
     secrets:
-      SLACK_PR_CHANNEL_ID:
+      SLACK_CHANNEL_ID:
         required: true
       SLACK_BOT_TOKEN:
         required: true
@@ -109,5 +108,3 @@ jobs:
             }
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-
-
