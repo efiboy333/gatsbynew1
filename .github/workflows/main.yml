@@ -1,0 +1,24 @@
+name: Staging Build Gatsby Site
+
+on:
+  push:
+    branches:
+      - "*"
+      - "**"
+      - main
+      - master
+
+jobs:
+  
+  build-gatsby-site:
+    name: Build Gatsby Site
+    uses: ./.github/workflows/deploy-build.yaml
+
+  slack-notify:
+    name: slack-notify
+    uses: ./.github/workflows/slack.yaml
+    with:
+      STATUS:  success
+    secrets:
+      SLACK_PR_CHANNEL_ID: ${{ secrets.SLACK_PR_CHANNEL_ID }}
+      SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
