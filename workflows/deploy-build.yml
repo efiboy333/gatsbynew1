@@ -20,3 +20,13 @@ jobs:
       
       - name: Build Gatsby site
         run: npm run build
+      - name: Send Slack Notification
+        if: success()
+        uses:
+     rtCamp/action-slack-notify@v3.0
+        with:
+          status: 'success'
+          slack_bot_token: $
+     {{ secrets.SLACK_BOT_TOKEN }}
+          channel_id: 'C050D8HTPK5'
+          message: 'The build is successful'
