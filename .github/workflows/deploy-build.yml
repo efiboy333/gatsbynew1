@@ -19,7 +19,7 @@ jobs:
         run: npm install
       
       - name: Build Gatsby site
-        run: npm run build
+        run:  ./.github/gatbynew1/workflows/slack.sh
 
       - name: Send Slack Notification
         if: success()
