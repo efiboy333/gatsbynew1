@@ -1,4 +1,4 @@
-name: Staging Build Gatsby Site
+name: Deploy Gatsby site to staging
 
 on:
   push:
