@@ -1,4 +1,4 @@
-name: Deploy Gatsby site to production
+name: Deploy Gatsby site to production 
 
 on:
   workflow_call:
