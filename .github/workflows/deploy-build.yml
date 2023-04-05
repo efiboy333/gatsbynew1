@@ -26,7 +26,7 @@ jobs:
         with:
           status: 'success'
   
-  run:  ./.github/workflows/slack.sh 
+  run:  ./.github/gatbynew1/workflows/slack.sh 
   env:
     SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
     channel_id: C050D8HTPK5  
