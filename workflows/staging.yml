@@ -12,11 +12,11 @@ jobs:
   
   build-gatsby-site:
     name: Build Gatsby Site
-    uses: ./.github/workflows/deploy-build.yaml
+    uses: ./.github/workflows/deploy-build.yml
 
   slack-notify:
     name: slack-notify
-    uses: ./.github/workflows/slack.yaml
+    uses: ./.github/workflows/slack.yml
     with:
       STATUS:  success
     secrets:
