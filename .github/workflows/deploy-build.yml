@@ -1,32 +1,25 @@
 name: Deploy Gatsby site to stage
-
 on:
-  workflow_call:
-  
+  ? workflow_call
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14.x'
-          
+          node-version: 14.x
       - name: Install dependencies
         run: npm install
-      
       - name: Build Gatsby site
-        run:  ./.github/gatbynew1/workflows/slack.sh
-
+        run: ./.github/gatbynew1/workflows/slack.sh
       - name: Send Slack Notification
         if: success()
         uses: rtCamp/action-slack-notify@v3.0
         with:
-          status: 'success'
+          status: success
           env:
             SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
             channel_id: C050D8HTPK5
- 
